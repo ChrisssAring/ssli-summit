@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Add Record Form</title>
+</head>
+<body>
+<form action="insert.php" method="post">
+    <p>
+        <label for="organization">Organization:</label>
+        <input type="text" name="organization">
+    </p>
+    <p>
+        <label for="title">Title:</label>
+        <input type="text" name="title">
+    </p>
+    <p>
+        <label for="image-url">Image URL:</label>
+        <input type="url" name="image-url">
+    </p>
+    <p>
+        <label for="description">Description:</label>
+        <input type="text" name="description">
+    </p>
+    <p>
+        <label for="city">City:</label>
+        <input type="text" name="city">
+    </p>
+    <p>
+        <label for="state-code">State Code:</label>
+        <input type="text" name="state-code" maxlength="2">
+    </p>
+    <p>
+        <label for="salary-min">Salary Min:</label>
+        <input type="text" name="salary-min">
+    </p>
+    <p>
+        <label for="salary-max">Salary Max:</label>
+        <input type="text" name="salary-max">
+    </p>
+    <p>
+        <label for="date">Date:</label>
+        <input type="date" name="date">
+    </p>
+    <p>
+        <label for="page-url">Page URL:</label>
+        <input type="url" name="page-url">
+    </p>
+    <p>
+            <label for="opportunity-type">Title:</label>
+            <select name="opportunity-type">
+                    <option value="job">job</option>
+                    <option value="internship">internship</option>
+                    <option value="other">Other</option>
+                  </select>
+    </p>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
