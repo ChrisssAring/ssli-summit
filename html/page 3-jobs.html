@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>STONE FOR THE WORLD</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body id="jobs">
+    <h1> Stone Soup</h1>
+    <div class="heading">
+    <table id="firstRow">
+      <select name="type"> <!--For type of jobs-->
+        <option value="" disabled selected hidden> Any Type</option>
+        <option value="Type1">Type1</option>
+        <option value="type2">Type 2</option>
+        <option value="Type3">Type3 </option>        
+      </select> &nbsp;&nbsp;
+      
+      <select name="level"> <!--for level of jobs-->
+        <option value="" disabled selected hidden>Any Level</option>
+        <option value="level1"> Level</option>        
+        <option value="level2"> Level2</option>
+        <option value="level3"> Level3</option>
+        </select>&nbsp;&nbsp;
+      
+      <select name="location"> <!-- for the location of the job-->
+        <option value="" disabled selected hidden>Any Location</option>
+        <option value="location1">Location1</option>
+        <option value="location2">Location2</option>
+        <option value="location3">Location3</option>
+      </select>
+      
+      </table>
+    </div>
+    
+    <div> <!-- job types starts here-->
+    <table><br> <!-- job type 1 -->
+     <div id="jobType1"> <image src="image1.jpg"></image>
+       <h8>Sustainability Research Analyst</h8><h6>Share Creators&nbsp; Seattle, WA</h6>
+      <p>
+        Manage Consultant Scopes of work blah blah</p>
+        <button id="buttonJob1" onclick="showMoreJob1()" style="color:blue;"> More..</button> 
+        <button id="shoMoreJob1()" style="color:blue;"> Less</button>  <br><br>
+        <h9 style="color:green;"> $40,000-$55,000 </h9> &nbsp;
+        
+          <ul>
+            <li>Entry Level</li> &nbsp; <li>Full Time</li>
+       </ul></div>
+      <br><br>
+      
+      <!-- job type 2 -->
+      <div id="jobType2">
+        <image src="image2.jpg"></image>
+        <h8>Principal SDE</h8>
+        <h6>Amazon&nbsp; Seattle, WA  </h6>
+            <p>This job is blah blah </p>
+              <button id="buttonJob1" onclick="showMoreJob1()" style="color:blue;"> More..</button> 
+              <button id="shoMoreJob1()" style="color:blue;"> Less</button><br><br>
+                  <h9 style="color:green;"> $40,000-$55,000 </h9> &nbsp;
+
+                    <ul>
+                        <li>Entry Level</li> &nbsp; <li>Full Time</li>
+                    </ul> 
+      </div>
+      
+      <!--job type 3 -->
+      <div id="jobType3">
+        <image src="image3.jpg"></image>
+          <h8>Business Analyst</h8>
+          <h6> Amazon &nbsp; Seattle, WA</h6>
+            <p>This job is blah blah blah</p>
+        <button id="buttonJob1" onclick="showMoreJob1()" style="color:blue;"> More..</button> 
+        <button id="shoMoreJob1()" style="color:blue;"> Less</button><br>
+        <h9 style="color:green;"> $40,000-$55,000 </h9> &nbsp;
+
+        <ul>
+          <li>Entry Level</li> &nbsp; <li>Full Time</li>
+        </ul> 
+      </div>
+
+      
+      
+      
+    </table>
+    </div>
+    
+  </body>
+</html>

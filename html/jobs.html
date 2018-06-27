@@ -14,7 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <script src="../js/jobs.js"></script>
-    <body>
+    <body id="jobSEction">
         <!-- navigation bar  -->
         <div class="container-fluid shadow" id="navbar">
             <ul class="list-inline">
@@ -59,7 +59,7 @@
                 <div class="list-inline-item">
                     <h4 >Your opportunities</h4>
                 </div>
-                <img class="list-inline-item" src="../images/folder.png" alt="Icon">
+                <img class="list-inline-item" src="../images/folder.png" alt="Icon" height="42" width="39">
             </ul>
 
         </div>
@@ -68,10 +68,60 @@
                 <div class="list-inline-item">
                     <img class="item-icon" src="">
                     <div>
-                        <h1>Sustainability Research Analyst</h1><br/>
-                        <h2>Share Creators</h2><span>Seattle, WA</span><br/>
-                        <p>Manages consultant jkjkjkjkkkjk</p><br/>
-                        <h3></h3>
+  
+    <div id="jobTable" style="position:absolute; top: 80px; left:0; border-style:solid;margin: 50px;padding:500px "> 
+        
+        <!-- job types starts here-->
+      <div  style="float:left;padding:10px;">
+          <image src="logo1.jpg" width="30" height="30"></image></div>
+        <div style="float: left">
+             <P>Title of a Job</P>
+        <p>Company Name<span>Location</span></p>
+        <p>Job description.....</p>
+        <button id="buttonJob1" onclick="#" style="color:blue;"> More..</button> more description goes here 
+    
+        <h5 style="color:green;"> $40,000-$55,000 </h5> &nbsp;
+        
+          <ul>
+            <li>Entry Level</li> &nbsp; <li>Full Time</li>
+        </ul></div>  <input type="checkbox" name="check"></div>
+      <br><br>
+      
+      <!-- job type 2 -->
+      <div id="jobType2">
+        <image src="logo2.jpg"></image>
+        <h4>Principal SDE</h4>
+        <h5>Amazon&nbsp; Seattle, WA  </h5>
+            <p>This job is blah blah </p>
+              <button id="buttonJob1" onclick="showMoreJob1()" style="color:blue;"> More..</button> 
+              <button id="shoMoreJob1()" style="color:blue;"> Less</button><br><br>
+                  <h5 style="color:green;"> $40,000-$55,000 </h5> &nbsp;
+
+                    <ul>
+                        <li>Entry Level</li> &nbsp; <li>Full Time</li>
+        </ul> <input type="checkbox" name="check">
+      </div>
+      
+      <!--job type 3 -->
+      <div id="jobType3">
+        <image src="logo3.jpg"></image>
+          <h4>Business Analyst</h4>
+          <h5> Amazon &nbsp; Seattle, WA</h5>
+            <p>This job is blah blah blah</p>
+        <button id="buttonJob1" onclick="showMoreJob1()" style="color:blue;"> More..</button> 
+        <button id="shoMoreJob1()" style="color:blue;"> Less</button><br>
+        <h9 style="color:green;"> $40,000-$55,000 </h9> &nbsp;
+
+        <li>Entry Level</li><li>Full Time</li>
+        <input type="checkbox" name="check">
+        
+      </div>
+
+      
+      
+      
+   
+    </div>
                     </div>
                     <img class="item-check" src="">
                 </div>

@@ -9,3 +9,6 @@
     color: #332727;
     border: solid 1px #e6e8ed;
 }
+p{
+    float: left;
+}
