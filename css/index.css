@@ -1,0 +1,54 @@
+.jumbotron {
+	margin: 0;
+	border-radius: 0;
+}
+
+#intro-container {
+	box-shadow: inset 0px 7px 3px -3px rgba(50, 50, 50, 0.35);
+	background: url('../images/sea.png') center center;
+	background-size: cover;
+	padding: 4% 18%;
+}
+
+#mission-container {
+	max-width: 920px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+#diff-container {
+	background: url('../images/map.png') no-repeat center bottom;
+	background-color: #36adf7;
+	background-size: contain;
+	padding: 3% 16%;
+	min-height: 500px;
+}
+
+#action-container {
+	max-width: 80%;
+	padding: 2% 5%;
+}
+
+.action-icon {
+	width: 100px;
+	height: 100px;
+	margin: 15px;
+}
+
+.col-sm-4 {
+	padding: 1% 5%;
+}
+
+#empower-container {
+	padding: 4% 10%;
+	background-color: #b8e986;
+}
+
+#bottom-container {
+	background-color: #55616a;
+	padding: 2% 0;
+}
+
+.white-text {
+	color: white;
+}
