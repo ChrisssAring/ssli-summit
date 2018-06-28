@@ -6,21 +6,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Bootstrap CSS-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-        <!-- Own customazied CSS file, overrides bootstrap's -->
+        <!-- Own customized CSS file, overrides bootstrap's -->
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" type="text/css" href="../css/index.css">
     </head>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script>
+        function redirect(addr) {
+            window.location.href = addr;
+        }
+    </script>
     <body>
         <!-- navigation bar  -->
-        <div class="container-fluid shadow" id="navbar">
+        <div class="container-fluid" id="navbar">
             <div class="list-inline">
                 <a href="index.html"><img id="icon" class="list-inline-item" src="../images/logo.png" alt="Icon"></a>
                 <a class="list-inline-item nav-option" href="jobs.html">find green jobs</a>
-                <a class="list-inline-item nav-option" href="jobs.html">find green education</a>
-                <a class="list-inline-item nav-option" href="#"><img class="menu-icon" src="../images/menu.png" alt="Icon"></a>
+                <a class="list-inline-item nav-option" href="education.html">find green education</a>
             </div>
         </div>
 
@@ -31,7 +35,8 @@
             <h2 class="sourceSerif">"aspirational super awesome copy here talking about how great we are and all of the
                 wondering things we do but limited to about 200 characters"</h2>
             </br>
-            <button type="button" class="btn btn-outline-success">Discover green opportunities</button>
+            <a href="jobs.html"><button type="button" class="btn btn-outline-success roundBtn">
+                Discover green opportunities</button></a>
         </div>
 
         <!-- Mission Statement  -->
@@ -82,12 +87,32 @@
         <!-- Empowering youth  -->
         <div class="jumbotron text-center" id="empower-container">
             <h3>Empowering our youth to be the sustainability leaders of their generation</h3></br>
-            <button type="button" class="btn btn-outline-success">Discover green opportunities</button>
+            <a href="jobs.html"><button type="button" class="btn btn-outline-success roundBtn">
+                Discover green opportunities</button></a>
         </div>
 
         <!-- Signature -->
         <div class="jumbotron text-center" id="bottom-container">
-            <p class="white-text">Stone Soup Leadership Institute 2018 Ⓒ</p>
+            <p class="gray-text bold">Our network</p>
+            <div class="row" id="network-row">
+                <div class="col-sm-4" onclick="redirect('http://virtualfieldstation.com/')">
+                  <img class="network-icon" src="../images/network-1.png" alt="Icon">
+                  <p class="bold teal-text Xsmall">Virtual Field Station</p>
+                </div>
+                <div class="col-sm-4" onclick="redirect('http://shyli.org/')">
+                  <img class="network-icon" src="../images/network-2.png" alt="Icon">
+                  <p class="bold teal-text Xsmall">Sustainable Hawaii</p>
+                </div>
+                <div class="col-sm-4" onclick="redirect('http://soup4worldinstitute.com/')">
+                  <img class="network-icon" src="../images/network-3.png" alt="Icon">
+                  <p class="bold teal-text Xsmall">StoneSoup Leadership Institute</p>
+                </div>
+            </div>
+            <p class="gray-text Xsmall" id="desc">The Stone Soup Leadership Institute develops educational tools, trainings, initiatives to prepare
+                young and emerging leaders to build a more sustainable world. The Institute's book and educational curriculum,
+                Stone Soup for the World: Life-Changing Stories of Everyday Heroes inspire, educate, and empower. Founded on Martha's Vineyard
+                in 1997, the Institute is a 501c3 non-profit organization. </p>
+            <p class="bold teal-text Xsmall">Stone Soup Leadership Institute 2018 Ⓒ</p>
         </div>
   </body>
 </html>

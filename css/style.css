@@ -9,49 +9,64 @@ body {
     text-align: center;
 }
 
-p,h1,h2,h3,h4,li,a {
+p,h1,h2,h3,h4,li,a,button {
     font-family: 'Open Sans', sans-sans-serif;
 	color: #332727;
+	margin: 0 auto;
 }
 
 h1 { font-size: 42px; }
 h2 { font-size: 32px; }
 h3 { font-size: 24px; }
 h4 { font-size: 20px; }
+h5 { font-size: 14px; }
 p { font-size: 16px; }
+p.Xsmall { font-size: 14px; }
 
 h1.sourceSerif, h2.sourceSerif, h3.sourceSerif  {
 	font-family: 'Source Serif Pro';
 }
 
 .bold { font-weight: bold; }
+.white-text { color: white; }
+.gray-text { color: #55616a; }
+.teal-text { color: #90b2b7; }
+.blue-text { color: #36adf7; }
 
+.jumbotron {
+	margin: 0;
+	border-radius: 0;
+}
 /*****************************************
  Navigation bar styling
  *****************************************/
 #navbar {
   background-color: #ffffff;
+  text-align: left;
+  max-width: 830px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .list-inline {
-    line-height: 60px;
-}
-.nav-link {
-    text-transform: uppercase;
-    font-family: 'Open Sans';
-    font-weight: bold;
-    color: #9bc53d;
+    line-height: 35px;
 }
 
 .nav-option {
     text-transform: uppercase;
-    font-family: 'Open Sans';
+	border-bottom: 3px solid transparent;
     font-weight: bold;
     color: #9bc53d;
-	margin: 0 30px;
+	margin: 1% 30px;
 }
 
-.btn {
+.nav-option:hover {
+	border-bottom: 3px solid #9bc53d;
+	text-decoration: none;
+	color: #9bc53d;
+}
+
+.roundBtn {
 	text-transform: uppercase;
 	font-weight: bold;
 	background: white;
@@ -61,16 +76,49 @@ h1.sourceSerif, h2.sourceSerif, h3.sourceSerif  {
 	border-radius: 40px;
 }
 
-.btn:hover {
+.roundBtn:hover {
 	border-color: #9bc53d;
 	color: white;
 	background-color: #9bc53d;
 }
 
 #icon {
-    width: 20%;
+    width: 25%;
 }
 
 .menu-icon {
     width: 30px;
+}
+
+#empower-container {
+	padding: 4% 10%;
+	background-color: #b8e986;
+}
+
+/*****************************************
+ Signature div styling
+ *****************************************/
+ .col-sm-4 {
+ 	padding: 1% 5%;
+ }
+
+#bottom-container {
+	background-color: #edecea;
+	padding: 2% 0;
+}
+
+#network-row {
+	padding: 0% 20%;
+}
+
+.network-icon {
+	cursor: -webkit-grab; cursor: grab;
+	width: 80px;
+	height: 80px;
+	margin: 15px 0;
+}
+
+#desc {
+	padding: 0 10%;
+	padding-bottom: 2%;
 }
