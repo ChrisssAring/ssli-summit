@@ -16,7 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <script src="../js/jobs.js"></script>
-    <body id="jobSEction">
+    <body>
         <!-- navigation bar  -->
         <div class="container-fluid" id="navbar">
             <div class="list-inline">
@@ -40,7 +40,8 @@
                   </div>
                 </div>
                 <div class="dropdown list-inline-item">
-                  <button class="btn btn-secondary dropdown-toggle dropdownMenuButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <button class="btn btn-secondary dropdown-toggle dropdownMenuButton"
+                    type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Any level
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -50,7 +51,8 @@
                   </div>
                 </div>
                 <div class="dropdown list-inline-item">
-                  <button class="btn btn-secondary dropdown-toggle dropdownMenuButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <button class="btn btn-secondary dropdown-toggle dropdownMenuButton"
+                    type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Any location
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -60,12 +62,32 @@
                   </div>
                 </div>
                 <div class="list-inline-item" id="blank"></div>
-                <div class="list-inline-item">
+                <div class="list-inline-item point" onclick="folderOnClick()">
                     <h5 class="gray-text">Your opportunities</h5>
                 </div>
-                <img class="list-inline-item" id="folderIcon" src="../images/folder.png" alt="Icon">
+                <img class="list-inline-item point" id="folderIcon"
+                    onclick="folderOnClick()" src="../images/folder.png" alt="Icon">
             </div>
         </div>
+
+        <!-- Option to email the saved list -->
+        <div class="container-fluid list-inline" id="email-container">
+            <h3 class="list-inline-item teal-text" id="emailTxt">opportunities in your list </h3>
+            <button type="button" class="btn list-inline-item"
+                id="emailBtn" onclick="showEmailForm()">Email Your List</button>
+        </div>
+
+        <!-- Email popup container -->
+        <form class="container shadow-lg" id ="popup-container">
+            <div class="form-group row" >
+              <label for="inputPassword" class="col-sm-2 col-form-label">Email</label>
+              <div class="col-sm-8">
+                <input type="email" class="form-control" id="inputEmail" placeholder="my_name@me.com">
+              </div>
+              <button type="button" class="btn col-sm-2"
+                  id="sendBtn" onclick="sendEmail()">Send!</button>
+            </div>
+        </form>
 
         <!-- List of jobs  -->
         <div class="container-fluid" id="results-container">
@@ -119,7 +141,7 @@
         <div class="list-inline" id="scroll-container">
             <button type="button" onclick=""
                 class="btn list-inline-item arrowBtn"> < </button>
-            <p class="gray-text Xsmall list-inline-item">1-10 of 250</p>
+            <p class="gray-text Xsmall list-inline-item" id="pageNav">1-10 of 250</p>
             <button type="button" onclick=""
                 class="btn list-inline-item arrowBtn"> > </button>
         </div>
