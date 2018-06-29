@@ -32,8 +32,7 @@ function appendJob(id, pic_url, title, company, loc, desc, price_lo, price_hi, l
     // abridge the job description to the first 150 characters
     var abridged = desc.substring(0, 150);
 
-    var checkboxID = "C" + String(id); // unique ID for the checkbox; used later to get the job ID
-
+    var checkboxId = "C" + String(id);
     // make new html component
     var subDiv = $("<div class='jobItem shadow list-inline' id=" + String(id) + "> \
         <img class='list-inline-item jobIcon align-top' src=" + pic_url + " alt='Icon'> \
@@ -42,7 +41,11 @@ function appendJob(id, pic_url, title, company, loc, desc, price_lo, price_hi, l
         "</span></p><p class='gray-text Xsmall jobDesc'>" + abridged +
         "<span class='blue-text'> more... </span></p><p class='teal-text Xsmall'>$" + String(price_lo) +
         " - $" + String(price_hi) + " • " + level + " • " + type + "</p></div><button type='button' \
-        onclick='toggle.call(this)' class='btn btn-outline-success list-inline-item checkbox align-top'>✓</button></div>")
+        class='btn btn-outline-success list-inline-item checkbox align-top' id=" + checkboxId +">✓</button></div>")
+
+    subDiv.click(function() {
+        toggle(checkboxId);
+    });
 
     // append to existing div
     var div = $("#results-container");
@@ -52,8 +55,6 @@ function appendJob(id, pic_url, title, company, loc, desc, price_lo, price_hi, l
 function appendEdu(id, pic_url, title, company, loc, desc, tuition, level) {
     // abridge the job description to the first 150 characters
     var abridged = desc.substring(0, 150);
-
-    var checkboxID = "C" + String(id); // unique ID for the checkbox; used later to get the job ID
 
     // make new html component
     var subDiv = $("<div class='jobItem shadow list-inline' id=" + String(id) + "> \
@@ -74,17 +75,18 @@ function appendEdu(id, pic_url, title, company, loc, desc, tuition, level) {
 // Function to mimic toggle behavior for checkmark button; called when checkbox is clicked
 ////////////////////////////////////////////////////////////////////////////////////
 let selectedJobs = new Set();   // stores id of user selected jobs
-var toggle = function() {
-    // get id of associated job; substring strips the "C" appended to it
-    // var id = this.attr("id").substring(1);
 
-    var clicked = this.style.background == "rgb(144, 178, 183)";    // if it was previously clicked
+function toggle(checkboxId) {
+    var checkbox = $("#"+checkboxId);
+    var jobId = checkboxId.substring(1);
+
+    var clicked = checkbox.css("background-color") == "rgb(144, 178, 183)";    // if it was previously clicked
     if (clicked) {      // make it clear, remove from set
-        // selectedJobs.delete(id);
-        this.style.background = 'transparent';
+        selectedJobs.delete(jobId);
+        checkbox.css("background-color",'transparent');
     } else {            // color it, add to set
-        // selectedJobs.add(id);
-        this.style.background = "rgb(144, 178, 183)";
+        selectedJobs.add(jobId);
+        checkbox.css("background-color","rgb(144, 178, 183)");
     }
 }
 
@@ -99,16 +101,21 @@ function folderOnClick() {
         $("#email-container").css("height", "50px");
 
         $("#emailTxt").text(selectedJobs.size + " opportunities in your list");
+        if (selectedJobs.size == 1)
+            $("#emailTxt").text(selectedJobs.size + " opportunity in your list");
         var btnVis = selectedJobs.size == 0 ? "hidden" : "visible";
-        // $("#emailBtn").css("visibility", btnVis);
+        $("#emailBtn").css("visibility", btnVis);
     }
     else {
-        $("#email-container").css("visibility", "hidden");
-        $("#email-container").css("position", "absolute");
-        $("#email-container").css("height", "0px");
+        hideOpportunityDiv();
     }
+}
 
-    console.log(selectedJobs.size);
+function hideOpportunityDiv() {
+    $("#email-container").css("visibility", "hidden");
+    $("#email-container").css("position", "absolute");
+    $("#email-container").css("height", "0px");
+    $("#emailBtn").css("visibility", "inherit");
 }
 
 /////////////////////////////////////////////////////////
@@ -121,11 +128,8 @@ function showEmailForm() {
 function sendEmail() {
     // hide popup
     $("#popup-container").css("visibility", "hidden");
-
     // hide opportunities div
-    $("#email-container").css("visibility", "hidden");
-    $("#email-container").css("position", "absolute");
-    $("#email-container").css("height", "0px");
+    hideOpportunityDiv();
 }
 
 
